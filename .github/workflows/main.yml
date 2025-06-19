@@ -15,7 +15,7 @@ env:
   #Common
   image_name : "pridhvi15/pridhviportfolio"
   version_long : ${{ github.sha }}
-  version_short : ${{ env.version_long:0:7 }}
+  # version_short : ${{ env.version_long:0:7 }}
   server_ip : "54.196.16.219" # Change to reflect your Region
   docker_token : ${{ secrets.DOCKER_PAT_TOKEN }}
   pem_file : ${{ secrets.SECRET_PEM }}
@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: false
-          tags: ${{ env.image_name }}:${{ env.version_short }}
+          tags: ${{ env.image_name }}:${{ env.version_long }}
         
 
   mainBuild:
@@ -65,5 +65,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ env.image_name }}:${{ env.version_short }}
+          tags: ${{ env.image_name }}:${{ env.version_long }}
    
