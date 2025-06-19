@@ -66,4 +66,11 @@ jobs:
         with:
           push: true
           tags: ${{ env.image_name }}:${{ env.version_long }}
+      - name: Save key
+        run: echo ${{ env.pem_file }} > manu.pem
+      - name: Make key Readonly
+        run: chmod 400 manu.pem
+      - name: Deploy
+        run: ssh -i manu.pem -o StrictHostKeyChecking=no ubuntu@${{ env.server_ip }} ./script ${{ env.version_long }}
+
    
