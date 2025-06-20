@@ -4,7 +4,7 @@ A personal portfolio project with automated CI/CD using GitHub Actions and Docke
 
 ## 🌐 Visit My  Website
 
-Check out the deployed portfolio here: [https:pridhvi.randomsasi.in](https:pridhvi.randomsasi.in)
+Check out the deployed portfolio here: [https://pridhvi.randomsasi.in](https://pridhvi.randomsasi.in)
 
 ## 🚀 Features
 
